@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4e68174246cd9318")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "daedb48d6efd9e08")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -168,54 +168,54 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Product Description: Description of the product
+		/// Product Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productDescription")]
 		public IHtmlString ProductDescription => this.Value<IHtmlString>("productDescription");
 
 		///<summary>
-		/// Product Image: Image of the product
+		/// Product Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productImage")]
 		public IPublishedContent ProductImage => this.Value<IPublishedContent>("productImage");
 
 		///<summary>
-		/// Product Name: Name of the product
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("productName")]
-		public string ProductName => this.Value<string>("productName");
-
-		///<summary>
-		/// Product Price: Price of the product
+		/// Product Price
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productPrice")]
 		public string ProductPrice => this.Value<string>("productPrice");
+
+		///<summary>
+		/// Product Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("productTitle")]
+		public string ProductTitle => this.Value<string>("productTitle");
 	}
 
-	/// <summary>ProductList</summary>
-	[PublishedModel("productList")]
-	public partial class ProductList : PublishedContentModel
+	/// <summary>Products</summary>
+	[PublishedModel("products")]
+	public partial class Products : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "productList";
+		public new const string ModelTypeAlias = "products";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProductList, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Products, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ProductList(IPublishedContent content)
+		public Products(IPublishedContent content)
 			: base(content)
 		{ }
 

@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Product>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "masterLayout.cshtml";
+}
+
+@Model.Value("productTitle")
+<br/>
+@Model.Value("productDescription")
+<br/>
+@Model.Value("productPrice")
+<br/>
+<img src="@Model.Value("productImage")"/>
+<br/>

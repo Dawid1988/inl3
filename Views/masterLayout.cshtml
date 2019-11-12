@@ -8,12 +8,50 @@
         <title>Umbraco is nutsack</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.js"></script>
+        <link href="main.css" type="text/css" rel="stylehsheet"> 
     </head>
     <body>
         <header>
-            This is the masterlayout header !
+            <nav>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col">
+                                Logo area
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row justify-content-end">
+                            <div class="col-md-2">
+                                <a href="/">
+                                    <button class="btn btn-primary btn-block">Home</button>
+                                </a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/products/">
+                                    <button class="btn btn-primary btn-block">Products</button>
+                                </a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/kundvagn/">
+                                    <button class="btn btn-primary btn-block">Cart</button>
+                                </a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/profile/">
+                                    <button class="btn btn-primary btn-block">Profile</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
-        <main>
+        <main class="container">
             @RenderBody()
         </main>
         <footer>

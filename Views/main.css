@@ -1,0 +1,12 @@
+body {
+    background-color: whitesmoke;
+  }
+  
+  main {
+    background-color: white;
+    height: 100vh;
+  }
+  
+  .btn {
+    border-radius: 0;
+  }
