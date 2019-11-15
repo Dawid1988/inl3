@@ -4,23 +4,11 @@
 	Layout = "masterLayout.cshtml";
 }
 
-@foreach (Product p in Model.Children)
-{
-    @p.Name
-    <br/>
-}
-
-
-@{
-	var selection = Umbraco.Content(Guid.Parse("fceb70d9-ce82-4c00-9926-d0655d13d791"))
-    .ChildrenOfType("product")
-    .Where(x => x.IsVisible());
-}
 <ul>
-	@foreach (var item in selection)
+	@foreach (ContentModels.Product item in Model.Children)
 	{
 		<li>
-			<a href="@item.Url">@item.Name</a>
+			<a href="@item.Url">@item.ProductTitle</a>
 		</li>
 	}
 </ul>
