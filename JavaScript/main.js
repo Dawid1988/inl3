@@ -22,6 +22,7 @@ if(document.readyState == 'loading')
         var button = event.target
         var container = button.parentElement.parentElement
 
+        
         var name = document.getElementById("product-head-text").innerHTML;
         var price = document.getElementById("product-price").innerHTML;
         var qua = document.getElementById("product-quantity").value;
@@ -30,21 +31,24 @@ if(document.readyState == 'loading')
             alert("Product quantity must be positive");
             return;
         }
-        toCHeckout(name,price,qua,image);
+        toCHeckout(name,price,qua,image,id);
     }
 
     var checkout = [];
 
-    function product(name,price,qua,image){
+    function product(name,price,qua,image,id){
 
         this.name = name;
         this.price = price;
         this.qua = qua;
         this.image = image;
+        this.id = id;
     }
 
-    function toCHeckout(name,price,qua,image){
-        var pp = new product(name,price,qua,image);
+    function toCHeckout(name,price,qua,image,id){
+        var pp = new product(name,price,qua,image,id);
         checkout.push(pp);
         console.log(pp.name);
+
+        console.log(checkout);
     }
