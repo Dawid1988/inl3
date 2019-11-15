@@ -4,11 +4,13 @@
 	Layout = "masterLayout.cshtml";
 }
 
-@foreach (Product p in Model.Children)
+@*@foreach (Product p in Model.Children)
 {
     @p.Name
     <br/>
+    
 }
+*@
 
 
 @{
@@ -16,11 +18,17 @@
     .ChildrenOfType("product")
     .Where(x => x.IsVisible());
 }
-<ul>
-	@foreach (var item in selection)
-	{
-		<li>
-			<a href="@item.Url">@item.Name</a>
-		</li>
-	}
-</ul>
+
+<div class="row mt-5">
+    <div class="col">
+        <ul>
+        	@foreach (var item in selection)
+        	{
+        		<li>
+        			<a href="@item.Url">@item.Name</a>
+        		
+        		</li>
+        	}
+        </ul>
+    </div>
+</div>

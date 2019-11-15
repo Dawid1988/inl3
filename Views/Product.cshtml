@@ -4,11 +4,39 @@
 	Layout = "masterLayout.cshtml";
 }
 
-@Model.Value("productTitle")
-<br/>
-@Model.Value("productDescription")
-<br/>
-@Model.Value("productPrice")
-<br/>
-<img src="@Model.Value("productImage")"/>
-<br/>
+
+<div class="container" id='@Model.Id'/>
+    <div class="row">
+        <div class="col-3">
+    	    <h3 class="product-title">@Model.Value("productTitle")</h3>
+    	</div>
+    </div>	
+    <div class="row">
+        <div class="col-3">
+    	<span class="product-description">Description: @Model.Value("productDescription")</span>
+    		<span class="product-price">Price: @Model.Value("productPrice")</span>
+    	</div>
+    </div>
+
+	<div class="row">
+	    <div class="col-5">
+			<div class="product-picture">
+				<img style="width: 100%" src='@Model.ProductImage.Url'/>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="col-3">
+	        <input class="product-quantity" type="number" placeholder="Quantity" name="Quantity" min="0" max="10">
+	    </div>
+	</div>
+			
+			<div class="row mt-5">
+			    <div class="col-3">
+				    <button class="button" type="button" onClick='addToBasket("id")'>Buy</button>
+				</div>
+			</div>
+</div>
+
+
+
