@@ -5,10 +5,19 @@
 }
 
 <ul>
+    <div class="row">
 	@foreach (ContentModels.Product item in Model.Children)
 	{
-		<li>
-			<a href="@item.Url">@item.ProductTitle</a>
-		</li>
+	    
+	        <div class="col-4 mt-5">
+	            <div class="col-8">
+        		    
+        		    	<a href="@item.Url">@item.ProductTitle</a>
+        		    	<img style="width: 100%" src='@item.ProductImage.Url'/>
+        	    	
+    	    	</div>
+    		</div>
+		
 	}
+	</div>
 </ul>
