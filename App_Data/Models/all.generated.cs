@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a6415ad30bb38100")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4028952379f3c597")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 
 // FILE: models.generated.cs
@@ -160,7 +160,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>Product</summary>
 	[PublishedModel("product")]
-	public partial class Product : PublishedContentModel
+	public partial class Product : PublishedContentModel, ICategories
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -210,13 +210,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productPrice")]
 		public string ProductPrice => this.Value<string>("productPrice");
-
-		///<summary>
-		/// Product Tags
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("productTags")]
-		public IEnumerable<string> ProductTags => this.Value<IEnumerable<string>>("productTags");
 
 		///<summary>
 		/// Product Title
@@ -285,9 +278,15 @@ namespace Umbraco.Web.PublishedModels
 		public string CategoryName => this.Value<string>("categoryName");
 	}
 
+	// Mixin Content Type with alias "categories"
+	/// <summary>Categories</summary>
+	public partial interface ICategories : IPublishedContent
+	{
+	}
+
 	/// <summary>Categories</summary>
 	[PublishedModel("categories")]
-	public partial class Categories : PublishedContentModel
+	public partial class Categories : PublishedContentModel, ICategories
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant

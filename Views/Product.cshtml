@@ -14,8 +14,8 @@
     </div>	
     <div class="row">
         <div class="col-3">
-    	<span class="product-description">Description: @Model.Value("productDescription")</span>
-    		<span id="product-price" class="product-price">Price: @Model.Value("productPrice")</span>
+    	<p class="product-description">Description: @Model.Value("productDescription")</p>
+    		<p class="product-price">Price: <span id="product-price">@Model.Value("productPrice")</span></p>
     	</div>
     </div>
 
@@ -34,7 +34,7 @@
 			
 			<div class="row mt-5">
 			    <div class="col-3">
-				    <button class="buy-button" type="button" onClick='addToBasket(@Model.Id)'>Buy</button>
+				    <button id="buy-button" class="btn btn-primary" onClick='addToBasket(@Model.Id)'>Buy</button>
 				</div>
 			</div>
 </div>
