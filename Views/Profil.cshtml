@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Profil>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "masterLayout.cshtml";
+}
+
+<script src="/JavaScript/profil.js"></script>
+<link rel="stylesheet" href="/css/profil.css">
+
+<div class="my-5">
+    <div class="row">
+        <div class="col">
+            <h2 style="text-align:center; margin: 0 auto;">Order History</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-10" id="history-container">
+        <!-- History rows in here -->
+    </div>
+</div>
