@@ -1,0 +1,7 @@
+div#items-container > div.row div.col-md-2 p, div#items-container > div.row div.col-md-1 p {
+    text-align: center;
+}
+
+.currency::after {
+    content: ":-";
+}
